@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz Game</title>
+    <style>
+        body {
+            color: #fff;
+            background-color:rgb(29,26,26);
+        }
+
+        .choice-container{
+            display:flex;
+            margin-bottom:1rem;
+            width:100%;
+            border-radius: 4px;
+            background:rgb(18,93,255);
+            font-size: 3rem;
+            min-width:80rem;
+        }
+
+        .choice-container:hover{
+            cursor:pointer;
+            box-shadow:0 0.4rem 1.4rem 0 rgba(6,103,247,0.5);
+            transform: scale(1.02);
+            transition: 0.15s ease-in-out;
+        }
+
+        .choice-prefix{
+            padding: 2rem 2.5rem;
+            color:#fff;
+        }
+
+        .choice-text {
+            padding:2rem;
+            width:50%;
+        }
+
+        .correct{
+            background: linear-gradient(32deg,rgba(11,223,36) 0%, rgb(41,232,111) 100%);
+        }
+
+        .incorrect{
+            background: linear-gradient(32deg,rgba(254,3,36) 0%, rgb(224,11,11,1) 100%);
+        }
+
+        .hud{
+            display:flex;
+            justify-content: space-between;            
+        }
+        .hud-prefix{
+            text-align:center;
+            font-size:2rem;
+        }
+        .hud-main.text{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="game" class="justify-center flex-column">
+            <div class="hud">
+
+                <div class="hud-item">
+                    <p id="progressText" class="hud-prefix">
+                        Question
+                    </p>
+                    <div id="progressBar">
+                        <div id="progressBarFull"></div>
+                    </div>
+                </div>
+
+                <div class="hud-item">
+                    <p id="hud-prefix">
+                        Score
+                    </p>
+                    <h1 id="score" class="hud-main-text">0</h1>
+                </div>
+            </div>
+
+            <h1 id="question">Cual es la respuesta correcta a esta pregunta?</h1>
+
+            <div class="choice-container">
+                 <p class="choice-prefix">A</p>
+                 <p class="choice-text" data-number="1">Choice 1</p>
+            </div>
+            <div class="choice-container">
+                 <p class="choice-prefix">B</p>
+                 <p class="choice-text" data-number="2">Choice 1</p>
+            </div>
+            <div class="choice-container">
+                 <p class="choice-prefix">C</p>
+                 <p class="choice-text" data-number="3">Choice 1</p>
+            </div>
+            <div class="choice-container">
+                 <p class="choice-prefix">D</p>
+                 <p class="choice-text" data-number="4">Choice 1</p>
+            </div>
+            <div class="choice-container">
+                 <p class="choice-prefix">E</p>
+                 <p class="choice-text" data-number="5">Choice 1</p>
+            </div>
+
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
